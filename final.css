@@ -33,37 +33,54 @@ nav ul li a {
 }
 
 /* Listings */
-.listings {
+/* Featured Section */
+.featured {
+    text-align: center;
     padding: 20px;
+    background: #f9f9f9;
 }
 
-.item-card {
+/* Featured Listings Grid */
+.item-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    padding: 20px 0;
+}
+
+/* Individual Item Box */
+.item {
     background: white;
+    width: 160px; /* Fixed width */
+    height: 200px; /* Fixed height */
     padding: 10px;
-    margin: 10px auto;
-    max-width: 200px;
-    text-align: left;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
 
-.item-card img {
+/* Item Images */
+.item img {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    display: block;
-    margin: 0 auto;
+    border-radius: 5px;
 }
 
-.item-card button {
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    width: 100%;
+/* Item Title */
+.item p {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 5px;
 }
+
 
 /* Sell Form */
 .sell-form {
