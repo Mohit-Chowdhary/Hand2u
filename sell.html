@@ -3,44 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sell Your Item - HAND2U</title>
-    <link rel="stylesheet" href="final.css">
+    <title>Sell Items - HAND2U</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .upload-section {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .upload-section input, .upload-section select, .upload-section textarea, .upload-section button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .upload-section button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        .upload-section button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-
     <header>
-        <h1>HAND2U</h1>
+        <h1>HAND2U Marketplace</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sell.html">Sell</a></li>
                 <li><a href="browse.html">Browse</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="sell-form">
+    <section class="upload-section">
         <h2>Sell Your Item</h2>
-        <form action="next" method="post" enctype="multipart/form-data">
-            <label for="title">Item Title:</label>
-            <input type="text" id="title" name="title" placeholder="Enter item name" required><br>
-
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" placeholder="Describe your item" rows="4" required></textarea><br>
-
-            <label for="price">Price ($):</label>
-            <input type="number" id="price" name="price" placeholder="Enter price" required><br>
-
-            <label for="images">Upload Images:</label>
-            <input type="file" id="images" name="images[]" multiple accept="image/*" required><br>
-
-            <button type="submit">Submit Listing</button><br>
-        </form>
+        <input type="text" id="item-name" placeholder="Item Name" required>
+        <select id="item-category" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="electronics">Electronics</option>
+            <option value="books">Books</option>
+            <option value="sports">Sports</option>
+            <option value="bicycles">Bicycles</option>
+        </select>
+        <input type="number" id="item-price" placeholder="Price (in ₹)" required>
+        <input type="file" id="item-image" accept="image/*" required>
+        <textarea id="item-description" placeholder="Enter item description..." required></textarea>
+        <input type="text" id="seller-contact" placeholder="Your Contact Details (Email/Phone)" required>
+        <button onclick="uploadItem()">Upload</button>
     </section>
 
     <footer>
-        <p>&copy; 2025 HAND2U. All rights reserved.</p>
+        <p>&copy; 2025 HAND2U Marketplace. All rights reserved.</p>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>
