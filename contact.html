@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAND2U Marketplace - Home</title>
+    <title>Contact Us - HAND2U</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            text-align: center;
         }
         header {
             background-color: #007bff;
@@ -22,6 +21,7 @@
         nav ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
         nav ul li {
             display: inline;
@@ -32,32 +32,29 @@
             text-decoration: none;
             font-size: 18px;
         }
-        .hero {
-            padding: 50px 20px;
-            background: url('marketplace.jpg') no-repeat center center/cover;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        }
-        .hero h1 {
-            font-size: 40px;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 20px;
-        }
-        .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 20px;
-        }
-        .feature-box {
-            width: 300px;
-            margin: 15px;
-            padding: 20px;
+        .contact-section {
+            max-width: 600px;
+            margin: 20px auto;
             background: white;
+            padding: 20px;
             box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
             border-radius: 8px;
+        }
+        .contact-section input, .contact-section textarea, .contact-section button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-section button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        .contact-section button:hover {
+            background-color: #0056b3;
         }
         footer {
             text-align: center;
@@ -74,35 +71,29 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="sell.html">Sell</a></li>
                 <li><a href="browse.html">Browse</a></li>
+                <li><a href="sell.html">Sell</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section class="hero">
-        <h1>Welcome to HAND2U Marketplace</h1>
-        <p>Buy and Sell with Ease. Join Our Marketplace Today!</p>
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message..." rows="5"></textarea>
+        <button onclick="submitForm()">Send Message</button>
     </section>
-    
-    <section class="features">
-        <div class="feature-box">
-            <h3>Wide Range of Categories</h3>
-            <p>Explore various product categories including electronics, books, and sports.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Easy Selling Process</h3>
-            <p>List your items effortlessly and connect with potential buyers instantly.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Secure Transactions</h3>
-            <p>Ensuring a safe and reliable platform for all your marketplace needs.</p>
-        </div>
-    </section>
-    
+
     <footer>
         <p>&copy; 2025 HAND2U Marketplace. All rights reserved.</p>
     </footer>
+
+    <script>
+        function submitForm() {
+            alert('Thank you for reaching out! We will get back to you soon.');
+        }
+    </script>
 </body>
 </html>
