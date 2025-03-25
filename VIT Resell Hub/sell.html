@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell - VIT Resell Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sell.css">
+</head>
+<body>
+    <header id="header">
+        <img src="images/logo.png" width="250" class="logo" alt="logo">
+
+        <div id="top">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="sell.html" class="active">Sell</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li><a href="account.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="sell-hero">
+        <div class="sell-info">
+            <h2>Start Selling Your Items</h2>
+            <p>Turn your unused items into cash. Create an account or log in to start selling.</p>
+        </div>
+    </section>
+
+    <!-- Choice Section - Only shown to non-logged in users -->
+    <section class="choice-container" id="choice-section">
+        <h2>To continue, please:</h2>
+        <div class="choice-buttons">
+            <button id="show-login-btn" class="choice-btn">Login</button>
+            <button id="show-signup-btn" class="choice-btn">Create Account</button>
+        </div>
+    </section>
+
+    <!-- Login Form Section (Initially Hidden) -->
+    <section class="form-container" id="login-section" style="display: none;">
+        <div class="form-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">College Email</label>
+                    <input type="email" id="login-email" placeholder="yourname@vitstudent.ac.in" required>
+                    <div class="error-message" id="login-email-error">Please enter a valid VIT email address.</div>
+                </div>
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <div class="error-message" id="login-error">Invalid credentials. Please try again.</div>
+                <div class="success-message" id="login-success">Login successful!</div>
+                <button type="submit" class="form-btn">Login</button>
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" id="switch-to-signup">Create one</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Signup Form Section (Initially Hidden) -->
+    <section class="form-container" id="signup-section" style="display: none;">
+        <div class="form-section">
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-email">College Email</label>
+                    <input type="email" id="signup-email" placeholder="yourname@vitstudent.ac.in" required>
+                    <div class="error-message" id="email-error">Please enter a valid VIT email address ending with @vitstudent.ac.in</div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" placeholder="Choose a username" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                    <div class="password-requirements">
+                        <small>Password must be at least 6 characters and contain at least one number and one special character.</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input type="password" id="signup-confirm" placeholder="Confirm your password" required>
+                    <div class="error-message" id="password-error">Passwords do not match</div>
+                </div>
+                <div class="success-message" id="signup-success">Account created successfully! You can now login.</div>
+                <button type="submit" class="form-btn">Create Account</button>
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sell Form Section (Initially Hidden) - Will be shown directly to logged-in users -->
+    <section class="form-container" id="sell-form-section" style="display: none;">
+        <div class="form-section">
+            <h2>Sell Your Item</h2>
+            <form id="sell-item-form">
+                <div class="form-group">
+                    <label for="item-name">Item Name</label>
+                    <input type="text" id="item-name" placeholder="Enter item name" required>
+                </div>
+                <div class="form-group">
+                    <label for="item-usage">Usage Duration</label>
+                    <div class="usage-input">
+                        <input type="number" id="item-usage-duration" min="0" step="0.1" placeholder="Duration" required>
+                        <select id="item-usage-unit">
+                            <option value="years">Years</option>
+                            <option value="months">Months</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="item-description">Description</label>
+                    <textarea id="item-description" placeholder="Provide details about your item" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="item-images">Upload Images</label>
+                    <input type="file" id="item-images" accept="image/*" multiple>
+                    <small>You can select multiple images</small>
+                </div>
+                <div class="form-group">
+                    <label for="item-price">Price (₹)</label>
+                    <input type="number" id="item-price" min="0" placeholder="Enter your asking price" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-phone">Phone Number</label>
+                    <input type="tel" id="seller-phone" placeholder="Enter your 10-digit phone number" required>
+                    <div class="error-message" id="phone-error">Please enter a valid 10-digit phone number</div>
+                </div>
+                <button type="submit" class="form-btn">Add Item</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="foot">
+        <div class="col1">
+            <img src="images/logo.png" class="logo" alt="logo" width="250">
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 VIT Resell Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="sell.js"></script>
+</body>
+</html>
