@@ -1,0 +1,166 @@
+
+#about-hero {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.about-info p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+#about-content {
+    padding: 20px 0 60px;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section h3 {
+    font-size: 24px;
+    color: #09afa4;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.about-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #09afa4;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-section ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.about-section ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.values-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.value-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.value-card i {
+    font-size: 40px;
+    color: #09afa4;
+    margin-bottom: 15px;
+}
+
+.value-card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.value-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.contact-section {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.contact-section h3 {
+    font-size: 24px;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #09afa4;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #078a82;
+}
+
+
+@media (max-width: 768px) {
+    .values-container {
+        flex-direction: column;
+    }
+    
+    .value-card {
+        width: 100%;
+    }
+}

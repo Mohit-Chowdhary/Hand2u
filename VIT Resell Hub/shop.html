@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - VIT Resell Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header id="header">
+        <img src="images/logo.png" width="250" class="logo" alt="logo">
+
+        <div id="top">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li><a href="account.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="shop-hero">
+        <div class="shop-info">
+            <h2>Browse Items</h2>
+            <p>Find great deals on pre-owned items from fellow VITians</p>
+        </div>
+    </section>
+
+    <section id="search-section">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for items...">
+            <button id="search-btn"><i class="fa-solid fa-search"></i></button>
+        </div>
+    </section>
+
+    <section id="products-section">
+        <div class="products-container" id="products-container">
+            <!-- Products will be loaded here dynamically -->
+            <div class="no-products-message" id="no-products-message">
+                Start typing to search for products...
+            </div>
+        </div>
+    </section>
+
+    <footer class="foot">
+        <div class="col1">
+            <img src="images/logo.png" class="logo" alt="logo" width="250">
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="account.html">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 VIT Resell Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="shop.js"></script>
+</body>
+</html>
